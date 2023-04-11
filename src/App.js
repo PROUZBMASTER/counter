@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React, { useState } from 'react';
+ import './index.css';
 function App() {
+  const [count, setCount] = useState(0)
+  function increment (){
+    setCount(count +1)
+  }
+  function decrement (){
+    setCount(count -1)
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='box'>
+      <h1 className='num'>{count}</h1>
+      <div className='box2'>
+      <button className='btn1' onClick={increment}>+</button>
+      <button className='btn2' onClick={decrement}>-</button>
+      </div>
     </div>
   );
 }
