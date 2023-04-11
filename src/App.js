@@ -8,11 +8,15 @@ function App() {
   function decrement (){
     setCount(count -1)
   }
+  function rest (){
+    setCount(0)
+  }
   return (
     <div className='box'>
       <h1 className='num'>{count}</h1>
       <div className='box2'>
       <button className='btn1' onClick={increment}>+</button>
+      <button className='btn3'onClick={rest}>restart</button>
       <button className='btn2' onClick={decrement}>-</button>
       </div>
     </div>
